@@ -3,7 +3,8 @@
     <head>
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="./src/index.js"></script>
+        <!-- <script src="./src/index.js"></script> -->
+        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
     </head>
     <body>
         <a-scene
@@ -11,7 +12,7 @@
             arjs
             renderer="logarithmicDepthBuffer: true;"
             vr-mode-ui="enabled: false"
-            gestureDetector
+            gesture-detector
             id="scene"
         >
             <a-marker
@@ -28,7 +29,7 @@
                     scale="0.5 0.5 0.5"
                     id="bowser-model"
                     class="clickable"
-                    gesturhandler
+                    gesture-handler
                     gltf-model="./src/models/myModel/scene-with-fontglb.glb"
                 >
                 </a-entity>
