@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body>
-    <a-scene embedded arjs>
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="./src/markers/pattern-marker.patt"
-      >
-        <a-entity
-          positon="0 0 0"
-          scale="50 50 50"
-          rotation="-90 0 0"
-          gltf-model="./src/models/factory_blocking/scene.gltf"
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    </head>
+    <body>
+        <a-scene
+            embedded
+            arjs
+            renderer="logarithmicDepthBuffer: true;"
+            vr-mode-ui="enabled: false"
+            gestureDetector
+            id="scene"
         >
-        </a-entity>
-      </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/pattern-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.5 0.5 0.5"
+                    id="bowser-model"
+                    class="clickable"
+                    gesturhandler
+                    gltf-model="./src/models/myModel/scene-with-fontglb.glb"
+                >
+                </a-entity>
+            </a-marker>
 
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="./src/markers/pattern-OILTANKER.patt"
-      >
-        <a-entity
-          positon="0 0 0"
-          scale="0.2 0.2 0.2"
-          rotation="-90 0 0"
-          gltf-model="./src/models/chemical_tank/scene.gltf"
-        >
-        </a-entity>
-      </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/pattern-OILTANKER.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.2 0.2 0.2"
+                    id="oil-tank-model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/chemical_tank/scene.gltf"
+                >
+                </a-entity>
+            </a-marker>
 
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+            <a-entity camera></a-entity>
+        </a-scene>
+
+        <script src="./src/index.js"></script>
+    </body>
 </html>
