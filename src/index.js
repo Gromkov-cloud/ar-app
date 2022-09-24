@@ -1,9 +1,5 @@
 const AFRAME = window.AFRAME
 
-window.addEventListener("click", () => { console.log("something") })
-
-console.log(AFRAME)
-
 AFRAME.registerComponent("gesture-handler", {
   schema: {
     enabled: { default: true },
@@ -22,10 +18,6 @@ AFRAME.registerComponent("gesture-handler", {
 
     this.el.sceneEl.addEventListener("markerFound", (e) => {
       this.isVisible = true;
-    });
-
-    this.el.sceneEl.addEventListener("markerLost", (e) => {
-      this.isVisible = false;
     });
   },
 
