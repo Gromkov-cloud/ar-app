@@ -18,19 +18,19 @@
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/pattern-marker.patt"
+                url="./src/markers/dehydrator/pattern_dehydrator.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
+                id="dehydrator_marker"
             >
                 <a-entity
                     positon="0 0 0"
-                    scale="0.5 0.5 0.5"
-                    id="bowser-model"
+                    scale="0.05 0.05 0.05"
+                    id="dehydrator_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/myModel/scene-with-fontglb.glb"
+                    gltf-model="./src/models/electric_dehydrator.glb"
                 >
                 </a-entity>
             </a-marker>
@@ -38,19 +38,59 @@
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/pattern-OILTANKER.patt"
+                url="./src/markers/storage/pattern_storage.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
+                id="storage_marker"
             >
                 <a-entity
                     positon="0 0 0"
-                    scale="0.2 0.2 0.2"
-                    id="oil-tank-model"
+                    scale="0.05 0.05 0.05"
+                    id="storage_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/chemical_tank/scene.gltf"
+                    gltf-model="./src/models/storage_tank.glb"
+                >
+                </a-entity>
+            </a-marker>
+
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/furnace/pattern_furnace.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="furnace_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="furnace_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/furnace.glb"
+                >
+                </a-entity>
+            </a-marker>
+
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/torch/pattern_torch.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="torch_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="torch_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/torch.glb"
                 >
                 </a-entity>
             </a-marker>
