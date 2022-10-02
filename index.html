@@ -98,11 +98,11 @@
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/rectification/pattern_rectification_column.patt"
+                url="./src/markers/rect1/pattern_rect1.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="torch_marker"
+                id="rect1"
             >
                 <a-entity
                     positon="0 0 0"
@@ -110,7 +110,66 @@
                     id="torch_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/rectification_column.glb"
+                    gltf-model="./src/models/rect1.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/rect2/pattern_rect2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="rect2"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="torch_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/rect2.glb"
+                >
+                </a-entity>
+            </a-marker>
+
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/rect3/pattern_rect3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="rect3"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="torch_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/rect3.glb"
+                >
+                </a-entity>
+            </a-marker>
+
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/rect4/pattern_rect4.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="rect4"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="torch_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/rect4.glb"
                 >
                 </a-entity>
             </a-marker>
