@@ -15,10 +15,11 @@
             gesture-detector
             id="scene"
         >
+            // dehydrator
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/dehydrator/pattern_dehydrator.patt"
+                url="./src/markers/dehydrator/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -35,30 +36,108 @@
                 </a-entity>
             </a-marker>
 
+            // storages
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/storage/pattern_storage.patt"
+                url="./src/markers/storages/gaz_storage_horizontal/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="storage_marker"
+                id="gaz_storage_horizontal_marker"
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="storage_model"
+                    id="gaz_storage_horizontal_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/storage_tank.glb"
+                    gltf-model="./src/models/gaz_storage_horizontal.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/storages/gaz_storage_vertical/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="gaz_storage_vertical_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="gaz_storage_vertical_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/gaz_storage_vertical.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/storages/gazgolder/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="gazgolder_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="gazgolder_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/gazgolder.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/storages/oil_storage_fixed/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="oil_storage_fixed_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="oil_storage_fixed_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/oil_storage_fixed.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/storages/oil_storage_float/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="oil_storage_float_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="oil_storage_float_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/oil_storage_float.glb"
                 >
                 </a-entity>
             </a-marker>
 
+            // furnace
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/furnace/pattern_furnace.patt"
+                url="./src/markers/furnace/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -75,101 +154,141 @@
                 </a-entity>
             </a-marker>
 
-            <a-marker
+            // torches
+            <!-- <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/torch/pattern_torch.patt"
+                url="./src/markers/torches/torch_big/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="torch_marker"
+                id="torch_big_marker"
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="torch_model"
+                    id="torch_big_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/torch.glb"
+                    gltf-model="./src/models/torch_big.glb"
+                >
+                </a-entity>
+            </a-marker> -->
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/torches/torches_small/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="torches_small_marker"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="torches_small_model"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/torches_small.glb"
                 >
                 </a-entity>
             </a-marker>
 
+            // rectification columns
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/rect1/pattern_rect1.patt"
+                url="./src/markers/rectification_columns/rectification_column_1/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="rect1"
+                id="rectification_column_1"
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="torch_model"
+                    id="rectification_column_1"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/rect1.glb"
+                    gltf-model="./src/models/rectification_column_1.glb"
                 >
                 </a-entity>
             </a-marker>
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/rect2/pattern_rect2.patt"
+                url="./src/markers/rectification_columns/rectification_column_2/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="rect2"
+                id="rectification_column_2"
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="torch_model"
+                    id="rectification_column_2"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/rect2.glb"
+                    gltf-model="./src/models/rectification_column_2.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/rectification_columns/rectification_column_3/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="rectification_column_3"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="rectification_column_3"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/rectification_column_3.glb"
+                >
+                </a-entity>
+            </a-marker>
+            <a-marker
+                preset="custom"
+                type="pattern"
+                url="./src/markers/rectification_columns/rectification_column_4/pattern.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="rectification_column_4"
+            >
+                <a-entity
+                    positon="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    id="rectification_column_4"
+                    class="clickable"
+                    gesture-handler
+                    gltf-model="./src/models/rectification_column_4.glb"
                 >
                 </a-entity>
             </a-marker>
 
+            // separator
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/rect3/pattern_rect3.patt"
+                url="./src/markers/separator/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="rect3"
+                id="separator"
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="torch_model"
+                    id="separator"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/rect3.glb"
-                >
-                </a-entity>
-            </a-marker>
-
-            <a-marker
-                preset="custom"
-                type="pattern"
-                url="./src/markers/rect4/pattern_rect4.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="rect4"
-            >
-                <a-entity
-                    positon="0 0 0"
-                    scale="0.05 0.05 0.05"
-                    id="torch_model"
-                    class="clickable"
-                    gesture-handler
-                    gltf-model="./src/models/rect4.glb"
+                    gltf-model="./src/models/oil_gaz_water_separator.glb"
                 >
                 </a-entity>
             </a-marker>
