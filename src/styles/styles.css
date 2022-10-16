@@ -1,7 +1,26 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
-    overflow: hidden;
+    overflow: auto;
 
     font-family: sans-serif;
+}
+
+body.hidden {
+    overflow: hidden;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0px;
 }
 
 .models-list {
@@ -76,6 +95,10 @@ body {
 
     background-color: black;
 
+    -webkit-transform: rotate(45deg);
+
+    -ms-transform: rotate(45deg);
+
     transform: rotate(45deg);
 }
 
@@ -89,6 +112,10 @@ body {
     height: 2px;
 
     background-color: black;
+
+    -webkit-transform: rotate(135deg);
+
+    -ms-transform: rotate(135deg);
 
     transform: rotate(135deg);
 }
@@ -104,6 +131,10 @@ body {
 
     background-color: black;
 
+    -webkit-transform: rotate(0);
+
+    -ms-transform: rotate(0);
+
     transform: rotate(0);
 }
 
@@ -117,6 +148,10 @@ body {
     height: 2px;
 
     background-color: black;
+
+    -webkit-transform: rotate(0);
+
+    -ms-transform: rotate(0);
 
     transform: rotate(0);
 }
