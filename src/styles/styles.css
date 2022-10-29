@@ -44,9 +44,11 @@ p {
 }
 
 .models-list ul {
+    max-width: 300px;
     padding: 150px 0 0 0;
     list-style: none;
     text-align: center;
+    margin: 0 auto;
 }
 
 .models-list li {
